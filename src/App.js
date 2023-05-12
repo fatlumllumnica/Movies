@@ -21,8 +21,13 @@ function App() {
       <Route path ="*" element = { <Error404 /> } />
     </Routes>
     </div>
-    
     </BrowserRouter>
+
+    <footer className='py-5'>
+      <div className='container'>
+        <p className='p-0 m-0 text-center'>CopyRight ...</p>
+      </div>
+    </footer>
     
     </div>
   );
