@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function MovieCard({movie}) {
 
@@ -12,7 +13,7 @@ function MovieCard({movie}) {
             <div className="card-body d-flex justify-content-between align-items-center">
                 <h5 className="card-title">{movie.titleText.text}</h5>
                 {/* <p className="card-text">{movie.primaryImage.caption.plainText}</p> */}
-                <a href="#" className="btn btn-outline-primary">Details</a>
+                <Link to={`/movies/${movie.id}`} className="btn btn-outline-primary">Details</Link>
             </div>
         </div>
     )
