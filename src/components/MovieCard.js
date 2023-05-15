@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 function MovieCard({movie}) {
 
-    const noimage = "https://cdn.vectorstock.com/i/preview-1x/48/06/image-preview-icon-picture-placeholder-vector-31284806.jpg"
+    const noimage = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png"
 
     return (
 

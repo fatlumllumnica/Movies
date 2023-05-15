@@ -10,26 +10,30 @@ import Nav from './components/Nav';
 
 function App() {
   return (
+<>
     <div className='container'>
-    <BrowserRouter>
-    < Nav />
-    <div className='container my-5'>
-    <Routes>
-      <Route path = "/" element = { <Home />} />
-      <Route path ="/movies" element = { <Movies />} />
-      <Route path ="/movies/:id" element = { <Movie />} />
-      <Route path ="*" element = { <Error404 /> } />
-    </Routes>
-    </div>
-    </BrowserRouter>
 
-    <footer className='py-5'>
-      <div className='container'>
-        <p className='p-0 m-0 text-center'>CopyRight ...</p>
-      </div>
-    </footer>
-    
+        <BrowserRouter>
+            <Nav/>
+            <div className='container my-5'>
+                <Routes>
+                    <Route path = "/" element = { <Home />} />
+                    <Route path ="/movies" element = { <Movies />} />
+                    <Route path ="/movies/:id" element = { <Movie />} />
+                    <Route path ="*" element = { <Error404 /> } />
+                </Routes>
+            </div>
+        </BrowserRouter>
+
+       
+
     </div>
+     <footer className='py-5'>
+     <div className='container'>
+         <p className='p-0 m-0 text-center'>CopyRight ...</p>
+     </div>
+ </footer> 
+ </>
   );
 }
 
