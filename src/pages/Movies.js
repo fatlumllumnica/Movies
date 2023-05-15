@@ -7,7 +7,7 @@ function Movies() {
 
   const [title, setTitle]= useState('')
   const [releaseYear, setReleaseYear]= useState('')
-  const [movies, setMovies] = useState([])
+  const [movies, setMovies] = useState()
 
   const options = {
     method: 'GET',
@@ -47,7 +47,8 @@ function Movies() {
                 setMovies(sMovies)
                 e.target.value = ''
             }).catch((error) => {
-                console.log(error)});
+                console.log(error)
+              });
         break;
   }
 
@@ -70,7 +71,11 @@ function Movies() {
     <section className="movies bg-light py-4">
       <div className='container'>
 
-        { movies.length> 0 && <h2 className='text-center mb-4'> Search results for {title && title} {releaseYear && releaseYear}</h2>}
+        { (movies && movies.length > 0) ? <h2 className='text-center mb-4'> 
+                                              Search results for {title && title} {releaseYear && releaseYear}
+                                          </h2> : ((movies !== undefined) ? <h2>No results found !</h2> : '')
+        }
+
 
         <div className="row">
             {
