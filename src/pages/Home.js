@@ -23,7 +23,7 @@ function Home() {
 
         axios.request(options).then((response) => {
             setMovies(response.data.results);
-            console.log(response.data.results)
+            // console.log(response.data.results)
         }).catch((error) => {
             console.log(error)});
         }, [])
@@ -34,7 +34,7 @@ function Home() {
     <>
     <section className='slider'>
     <div id="carouselExample" className="carousel slide">
-        <div className="carousel-inner">
+        <div className="carousel-inner" style={{height:"300px"}}>
 
             {
                 movies && movies.map( (movie, index) => {
